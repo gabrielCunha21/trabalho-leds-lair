@@ -83,13 +83,6 @@ void reconnect() {
       
       tft.pushImage(0,0,240,280,reconectando);
 
-      batteryPercentage = getBatteryPercentage();
-
-      tft.setCursor(30, 60);  // Ajuste conforme o tamanho do seu display
-      tft.print("Battery: ");
-      tft.print(batteryPercentage);
-      tft.println("%");
-
       delay(500);
     }
   }
@@ -103,13 +96,6 @@ void setup() {
 
   tft.setTextColor(TFT_BLACK);
   tft.setTextSize(2);
-
-  batteryPercentage = getBatteryPercentage();
-
-  tft.setCursor(40, 60);  // Ajuste conforme o tamanho do seu display
-  tft.print("Battery: ");
-  tft.print(batteryPercentage);
-  tft.println("%");
   
   pinMode(GPIO_NUM_35, OUTPUT);
   digitalWrite(GPIO_NUM_35, HIGH);
@@ -183,12 +169,12 @@ void loop() {
 
   tft.pushImage(0,0,240,280,enviando);
 
-  batteryPercentage = getBatteryPercentage();
+  // batteryPercentage = getBatteryPercentage();
 
-  tft.setCursor(40, 60);  // Ajuste conforme o tamanho do seu display
-  tft.print("Battery: ");
-  tft.print(batteryPercentage);
-  tft.println("%");
+  // tft.setCursor(40, 60);  // Ajuste conforme o tamanho do seu display
+  // tft.print("Battery: ");
+  // tft.print(batteryPercentage);
+  // tft.println("%");
 }
 
 void leituraSensor(){
